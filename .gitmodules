@@ -1,0 +1,27 @@
+[submodule "build"]
+	path = build
+	url = https://android.googlesource.com/platform/build
+[submodule "bionic"]
+	path = bionic
+	url = https://android.googlesource.com/platform/bionic
+[submodule "system/core"]
+	path = system/core
+	url = https://android.googlesource.com/platform/system/core
+[submodule "prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8"]
+	path = prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8
+	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8
+[submodule "bluedroid"]
+	path = bluedroid
+	url = https://android.googlesource.com/platform/external/bluetooth/bluedroid
+[submodule "hardware/libhardware"]
+	path = hardware/libhardware
+	url = https://android.googlesource.com/platform/hardware/libhardware
+[submodule "external/gtest"]
+	path = external/gtest
+	url = https://android.googlesource.com/platform/external/gtest
+[submodule "external/stlport"]
+	path = external/stlport
+	url = https://android.googlesource.com/platform/external/stlport
+[submodule "external/tinyxml2"]
+	path = external/tinyxml2
+	url = https://android.googlesource.com/platform/external/tinyxml2

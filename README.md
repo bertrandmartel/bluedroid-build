@@ -1,7 +1,5 @@
 # Bluedroid build #
 
-[![License](http://img.shields.io/:license-mit-blue.svg)](LICENSE.md)
-
 Standalone Bluedroid build 
 
 * This is useful if you already have Bluedroid dependencies and just want to work in a different project without requiring the full AOSP source

@@ -1,1 +1,5 @@
 /out
+/device
+/vendor
+build-prescript.sh
+

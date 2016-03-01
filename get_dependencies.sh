@@ -1,13 +1,14 @@
 #!/bin/bash
 
 function show_usage() {
-	echo "usage : ./get_dependencies.sh \$(OUT_DIR) \$(PRODUCT_DIR) \$(HOST_ARCH)"
-	echo "OUT_DIR     : the AOSP output directory (for instance ~/AOSP/out)"
-	echo "PRODUCT_DIR : product directory (for instance ~/AOSP/out/target/product/HMB4213H)"
-	echo "HOST_ARCH   : your host arch (for instance linux-x86)"
+	echo "usage : ./get_dependencies.sh \$(OUT_DIR) \$(PRODUCT_DIR) \$(HOST_ARCH) \$(PRODUCT_NAME)"
+	echo "OUT_DIR      : the AOSP output directory (ex: ~/AOSP/out)"
+	echo "PRODUCT_DIR  : product directory (ex: ~/AOSP/out/target/product/HMB4213H)"
+	echo "HOST_ARCH    : your host arch (ex: linux-x86)"
+	echo "PRODUCT_NAME : your product name (ex: generic)"
 }
 
-if [ -z $1 ] ||  [ -z $2 ] ||  [ -z $3 ]; then
+if [ -z $1 ] ||  [ -z $2 ] ||  [ -z $3 ] || [ -z $4 ]; then
 	show_usage
 	exit
 fi
@@ -15,6 +16,7 @@ fi
 OUT_DIR="$1"
 PRODUCT_DIR="$2"
 HOST_ARCH="$3"
+PRODUCT_NAME="$4"
 
 if [ ! -d "$1" ]; then
 	echo "Error ${OUT_DIR} directory not found"
@@ -47,7 +49,7 @@ declare -a DEPENDENCY_STATIC_LIBRARIES_FILES=("crtbegin_dynamic.o"     "crtbegin
 "libhardware_legacy.so"  "liblog.so"     "libm.so"          "libpower.so" \
 "libstdc++.so"           "libstlport.so" "libutils.so")
 
-OBJECT_DIR="out/target/product/generic/obj"
+OBJECT_DIR="out/target/product/${PRODUCT_NAME}/obj"
 BIN_DIR="out/host/${HOST_ARCH}/bin"
 
 mkdir -p ${OBJECT_DIR}/{SHARED_LIBRARIES,STATIC_LIBRARIES,lib}

@@ -31,12 +31,13 @@ lunch
 
 3) Retrieve your prebuilt static/shared library and `acp` command from your `PRODUCT_NAME` directory :
 ```
-./get_dependencies.sh $(OUT_DIR) $(PRODUCT_DIR) $(HOST_ARCH)
+./get_dependencies.sh $(OUT_DIR) $(PRODUCT_DIR) $(HOST_ARCH) $(PRODUCT_NAME)
 ```
-Complete example : `./get_dependencies.sh ~/AOSP/out ~/AOSP/out/target/product/HMB4213H linux-x86`
-* `OUT_DIR`     : the AOSP output directory (for instance ~/AOSP/out)
-* `PRODUCT_DIR` : product directory (for instance ~/AOSP/out/target/product/HMB4213H)
-* `HOST_ARCH`   : your host arch (for instance linux-x86)
+Complete example : `./get_dependencies.sh ~/AOSP/out ~/AOSP/out/target/product/HMB4213H linux-x86 HMB4213H`
+* `OUT_DIR`      : the AOSP output directory (ex: ~/AOSP/out)
+* `PRODUCT_DIR`  : product directory (ex: ~/AOSP/out/target/product/HMB4213H)
+* `HOST_ARCH`    : your host arch (ex: linux-x86)
+* `PRODUCT_NAME` : your product name (ex: generic) 
 
 4) Build Bludroid :
 ```
